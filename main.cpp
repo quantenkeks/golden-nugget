@@ -3,6 +3,6 @@
 
 int main(void)
 {
-   fprintf(stdout, "Hello world!");
+   fprintf(stdout, "Hello world!\n");
    return 0;
 }
