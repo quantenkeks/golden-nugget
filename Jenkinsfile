@@ -1,24 +1,25 @@
 pipeline {
     agent {
         docker {
-            image 'debian:latest'
+            image 'gcc:latest'
         }
     }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building ...'
+                sh 'make'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing ...'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying ...'
             }
         }
     }
